@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="titleproduct col-sm-12 ">
+            <!-- Home > Industries > Categories > Sub Category -->
+        </div>
+    </div>
+</div>
+<div class="productDetail container">
+    <div class="row">
+        <div class="prodDescription col-sm-10">
+            <div class="prodImage col-sm-5">
+                <img [src]="product_detail?.node.images.edges[0].node.src"  style="width:100%;max-height: 100%;">
+            </div>
+            <div class="col-sm-7">
+                <h2>{{product_detail?.node.title}}</h2>
+                <!-- <h4>{{product_detail?.description}}</h4> -->
+                <div class="boxprod col-sm-10" *ngIf="!showProduct" >
+                    <p><b>Rs. {{product_detail?.price}} </b> / Peice</p>
+                    <p>{{product_detail?.minOrder}} Peices (min order)</p>
+                    <p>Supply Ability: 80000 Peices/month</p>
+                    <p>Ships From: {{product_detail?.location}}</p>
+                    <!-- <a [routerLink]="['/ContactSupplier', product_detail?.node.id]"><input class="button submitbtn"  style="margin-left: 0px;" type="submit" name="submit" value="Contact Supplier"></a> -->
+                    <a (click)="contactSupplier(product_detail?.node.id)"><input class="button submitbtn"  style="margin-left: 0px;" type="submit" name="submit" value="Contact Supplier"></a>
+                </div>
+                 <div class="contactForm col-sm-10" *ngIf="showProduct">
+            <form ngNativeValidate ngNoForm (submit)="addCustomer(model,$event)">
+                <div class="labels">
+                    <!-- <h4>Product Name - {{product_detail?.node.title}}</h4> -->
+                    <h5>Quantity<span class="mandatory">*</span> -
+                        <input class="inputform" [(ngModel)]=" model.quantity" id="quantity" type="number" name="quantity" required />
+                    </h5>
+                </div>
+                <div [(hidden)]="showSuccess">
+                <br>
+                 <input  class="inputform" [(ngModel)]="model.email" id="email " placeholder=" Your email " type="email" name="email" required>
+
+                <br>
+                <input  class="inputform " [(ngModel)]="model.mobile" id="mobile" pattern="[789][0-9]{9}" placeholder=" Mobile Number " type="text" name="mobile" required>
+                <br> 
+                 <input  id="addToCartButton" class="button submitbtn" style="margin-left: 0%;padding: 3px 25px 3px 25px;" type="submit" name="submit" value="Send Enquiry Now"> 
+                </div>
+                <div [(hidden)]="!showSuccess">
+                 <img  src="assets/images/success.png" alt="Twitter" style="width:10%;margin-right: 0%;"><p>Our executive will contact you. Explore <a href="#">More Products</a></p>
+                </div>
+            </form>
+           
+        </div>
+            </div>
+        </div>
+       
+        <div class="col-sm-2">
+
+        </div>
+    </div>
+</div>

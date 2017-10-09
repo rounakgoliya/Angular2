@@ -1,0 +1,132 @@
+.slide {
+    width: 100%;
+    padding: 0%;
+}
+
+.market {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: 1px solid gray;
+    padding: 15px 0px;
+    background-color: white;
+}
+
+.marketImage {
+    padding: 0%;
+    height: 332px;
+}
+
+.marketImageSkew {
+    height: 300px;
+    -webkit-transform: skewX(-2deg);
+    -moz-transform: skewX(-2deg);
+    -ms-transform: skewX(-2deg);
+    -o-transform: skewX(-2deg);
+    transform: skewX(-2deg);
+}
+.collectionTitle{
+    position: absolute;
+    top: 200px;
+    color: gray;
+    left: 0px;
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 60%;
+    background: rgba(255,255,255,0.7);
+}
+.marketFeature {
+    padding: 1%;
+}
+
+.featureText {
+    padding: 1%;
+}
+
+.leftFeature {
+    text-align: left;
+}
+
+.rightFeature {
+    text-align: right;
+}
+
+.othermarket {
+    padding-top: 3%;
+}
+
+.requestForm {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border: 1px solid gray;
+    padding: 25px;
+    background-color: white;
+}
+
+.quickRequestForm {
+    box-shadow: 3px 3px 6px #888888;
+    height: 300px;
+    padding-bottom: 1%;
+}
+
+.quickRequestFormImage {
+    height: 300px;
+    padding-left: 0%;
+}
+
+.inputform {
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.selectoption {
+    width: 45%;
+    padding: 5px;
+    margin: 3px;
+    color: grey;
+}
+
+@media only screen and (max-width: 500px) {
+    //some value
+    .slide {
+        display: none;
+    }
+    .slidemobile {
+        display: block;
+        width: 100%;
+        padding: 0%;
+    }
+}
+
+.othermarketdesktop {
+    display: none;
+}
+
+@media only screen and (min-width: 700px) {
+    //some value
+    .slide {
+        display: block;
+    }
+    .slidemobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:700px) {
+    .othermarketdesktop {
+        display: block;
+    }
+}
+
+.btn-primary {
+    background-color: gray;
+    border-color: gray;
+}
+
+.btn {
+    padding: 6px 9px;
+    font-size: 12px;
+}

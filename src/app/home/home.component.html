@@ -1,0 +1,191 @@
+<div class="slide container">
+    <ztw-carousel interval='5000' style='width:100%;height:500px;'>
+        <ztw-carousel-item *ngFor='let image of Images'>
+            <img src={{image.url}} ztw-carousel-img>
+        </ztw-carousel-item>
+    </ztw-carousel>
+</div>
+<div class="slidemobile container">
+    <ztw-carousel interval='5000' style='width:100%;height:300px;'>
+        <ztw-carousel-item *ngFor='let image of ImagesMobile'>
+            <img src={{image.url}} ztw-carousel-img>
+        </ztw-carousel-item>
+    </ztw-carousel>
+</div>
+
+<!-- Markets -->
+<div class="market container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row" *ngIf="collections">
+                <div class="marketImage col-sm-6">
+                    <a [routerLink]="['/Gallery',collections[1]?.node.id]">
+                        <img [src]="collections[1]?.node.image.src" alt="New york" style="width:100%;height: 100%;">
+                        <h2 class="collectionTitle">
+                            {{collections[1]?.node.title}}
+                        </h2>
+                    </a>
+                </div>
+                    <div class="marketImage col-sm-6">
+                    <a [routerLink]="['/Gallery',collections[2]?.node.id]">
+                        <img [src]="collections[2]?.node.image.src" alt="New york" style="width:100%;height: 100%;">
+                        <h2 class="collectionTitle">
+                            {{collections[2]?.node.title}}
+                        </h2>
+                    </a>
+                </div>
+                <!-- <div class=" marketImage col-sm-6">
+                    <a [routerLink]="['/Market']"><img src="assets/images/chicago.jpg" alt="Chicago" style="width:100%;"></a>
+                </div> -->
+            </div>
+            <div class="row">
+                <h3 class="featureText">Features</h3>
+                <div class="marketFeature col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="assets/images/ny.jpg" alt="New york" style="width:100%;">
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="leftFeature">Feature description Feature description Feature description Feature description Feature description</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p class="rightFeature">Feature description Feature description Feature description Feature description Feature description</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="assets/images/ny.jpg" alt="New york" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="marketFeature col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="assets/images/ny.jpg" alt="New york" style="width:100%;">
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="leftFeature">Feature description Feature description Feature description Feature description Feature description</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p class="rightFeature">Feature description Feature description Feature description Feature description Feature description</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="assets/images/ny.jpg" alt="New york" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="marketFeature col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="assets/images/ny.jpg" alt="New york" style="width:100%;">
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="leftFeature">Feature description Feature description Feature description Feature description Feature description</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p class="rightFeature">Feature description Feature description Feature description Feature description Feature description</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="assets/images/ny.jpg" alt="New york" style="width:100%;">
+                        </div>
+                    </div>
+                    <a [routerLink]="['/Feature']">
+                        <h4 style="float: right;padding-right: 50px;">All Features ></h4>
+                    </a>
+                </div>
+            </div>
+            <div class="row" *ngIf="collections">
+                <div class="marketImage col-sm-6">
+                    <a [routerLink]="['/Gallery',collections[3]?.node.id]">
+                        <img [src]="collections[3]?.node.image.src" alt="New york" style="width:100%;height: 100%;">
+                        <h2 class="collectionTitle">
+                            {{collections[3]?.node.title}}
+                        </h2>
+                    </a>
+                </div>
+                    <div class="marketImage col-sm-6">
+                    <a [routerLink]="['/Gallery',collections[4]?.node.id]">
+                        <img [src]="collections[4]?.node.image.src" alt="New york" style="width:100%;height: 100%;">
+                        <h2 class="collectionTitle">
+                            {{collections[4]?.node.title}}
+                        </h2>
+                    </a>
+                </div>
+            </div>
+            <div class="othermarketdesktop row">
+                <div class="othermarket col-sm-4">
+                    <h5> Other Markets</h5>
+                    <ul>
+                        <li>Home Furnishing</li>
+                        <li>Hotel Furnishing</li>
+                        <li>Hospital Furnishing</li>
+                        <li>Resturant Furnishing</li>
+                        <li>Clothing</li>
+                    </ul>
+                </div>
+                <div class="marketImage marketImageSkew col-sm-2">
+                    <img src="assets/images/ny.jpg" alt="New york" style="width:100%;height:100%;">
+                </div>
+                <div class=" marketImage marketImageSkew col-sm-2">
+                    <img src="assets/images/chicago.jpg" alt="Chicago" style="width:100%;height:100%;">
+                </div>
+                <div class="marketImage marketImageSkew col-sm-2">
+                    <img src="assets/images/ny.jpg" alt="New york" style="width:100%;height:100%;">
+                </div>
+                <div class=" marketImage marketImageSkew col-sm-2" style="border-right: 4px solid white;">
+                    <img src="assets/images/chicago.jpg" alt="Chicago" style="width:100%;height:100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Request Form -->
+<div class="requestForm container">
+    <h3 style="margin-top: 0%;">Request For Quotation<span style="font-size: 16px;color: gray;"> - One Request , Multiple Praposals</span></h3>
+    <div class="row">
+        <div class="quickRequestFormImage col-sm-8">
+            <img src="assets/images/ny.jpg" alt="New york" style="width:100%;height:100% ">
+        </div>
+        <div class="quickRequestForm col-sm-4">
+            <h2>Quick Request Form</h2>
+            
+            <form ngNativeValidate ngNoForm (submit)="add(model,$event)">
+                <div [(hidden)]="showSuccess">
+                <input class="inputform hidden" [(ngModel)]="model.productdescription" id="productdescription"
+                    placeholder=" What are you looking for ?" type="hidden" name="productName" >
+                <input class="inputform hidden" style="width: 45%;" [(ngModel)]="model.quantity" placeholder=" Quantity ?" type="hidden" id="quantity" name="quantity">
+                <select class="selectoption hidden" [(ngModel)]="model.units" name="Units" placeholder="Units">
+                        <option style="color:#999;" value="null" disabled  selected><span style="color:#999;">Units</span></option>
+		        	    <option *ngFor="let c of units" [selected]="model.units == c.name" [value]="c.name">{{c.name}}</option>
+                    </select>
+                <h5 class="hidden">Request Type</h5>
+                <label class="btn hidden" [ngClass]="{'': !clicked, 'btn-primary': clicked}" (click)="clicked = true;clicked1 = false;clicked2=false;">
+                 Request Price
+                 </label>
+                <label class="btn hidden" [ngClass]="{'': !clicked1, 'btn-primary': clicked1}" (click)="clicked = false ; clicked1 = true;clicked2=false;">
+                 Request Sample
+                </label>
+                <label class="hidden btn" [ngClass]="{'': !clicked2, 'btn-primary': clicked2}" (click)="clicked = false ; clicked1 = false;clicked2=true;">
+                 Detailed Quote
+                </label>
+                
+                <input class="inputform" [(ngModel)]="model.email" id="email" placeholder=" Your email" type="email" name="email" required >
+                <br>
+                <input class="inputform" [(ngModel)]="model.requestType" id="mobile" pattern="[789][0-9]{9}" placeholder="Mobile Number" type="text" name="mobile" required >
+                <input class="button submitbtn" style="margin-left: 0%;" type="submit" name="submit" value="Submit">
+                </div>
+            <div [(hidden)]="!showSuccess">
+                 <img  src="assets/images/success.png" alt="Twitter" style="width:10%;margin-right: 0%;"><p>Our executive will contact you. Explore <a href="#">More Products</a></p>
+                </div>
+            </form>
+            
+            
+
+        </div>
+    </div>
+</div>

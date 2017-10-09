@@ -1,0 +1,51 @@
+
+.topMarketFeatures{
+    padding-bottom: 10px;
+   
+}
+.topMarketFeature
+{
+    border: 1px solid #95989a;
+
+}
+.catagories{
+        margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    width: 97%;
+     padding: 20px 35px 20px 35px;
+    background-color: white;
+}
+@media (max-width: 767px) {                  
+   
+      .catName{
+          display: none;
+}
+        .catNameR{
+          display: none;
+}
+   }
+      .catName{
+    margin-top: -140px;
+    background-color: white;
+    z-index: 1000;
+    font-size: 20px;
+    position: relative;
+    margin-left: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.catNameR{
+    margin-top: -140px;
+    background-color: white;
+    z-index: 1000;
+    font-size: 20px;
+    position: relative;
+    margin-right: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.catblock{
+    padding: 0px;
+        border: 1px solid #95989a;
+}

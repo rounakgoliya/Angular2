@@ -1,0 +1,32 @@
+.prodDescription {
+    padding-top: 30px;
+    background: white;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.titleproduct {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.boxprod {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 3px 3px 10px #888888;
+}
+
+.prodImage {
+    height: 400px;
+    width: 350px;
+    display: table;
+    padding: 0px;
+    box-shadow: 0px 1px 3px #888888;
+}
+
+.prodImage img {
+    height: 100%;
+    width: 100%;
+    display: tablecell;
+    vertical-align: middle;
+}

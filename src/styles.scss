@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* For mobile phones: */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.container {
+    display: block;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+body {
+    background-color: #DEDCDC;
+    font-family: 'Montserrat';
+}
+
+.head {
+    width: 100%;
+    background-color: white;
+}
+
+.topMarket {
+    width: 100%;
+    padding: 0px;
+    background-color: white;
+}
+
+.topMarketImage {
+    padding: 0px;
+}
+
+.submitbtn {
+    padding: 3px 20px 3px 20px;
+    margin-left: 66%;
+    margin-top: 7px;
+    background-color: gray;
+    border-radius: 17px;
+    border: none;
+    color: white;
+}
+.searchTerm {
+        float: left;
+        width: 100%;
+        border: 1px solid gray;
+        padding: 5px;
+        border-radius: 5px;
+        outline: none;
+        color: #9DBFAF;
+    }
+    
+    .searchTerm:focus {
+        color: #000;
+    }
+    .suggestions{
+    position: absolute;
+    background: white;
+    padding-top: 0%;
+    margin-top: 5%;
+    width: 96%;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+.suggestionLink{
+    text-decoration: none;
+    color: black;
+    padding: 1%;
+}
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                 url('http://i.stack.imgur.com/FhHRx.gif') 
+                // url('https://d3sj09wfwshy9v.cloudfront.net/blog/wp-content/uploads/triangle-spinner.gif')
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}

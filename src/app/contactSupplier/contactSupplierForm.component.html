@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Contact Supplier</h2>
+        </div>
+        <div class="contactForm col-sm-12">
+            <form ngNativeValidate ngNoForm (submit)="addCustomer(model,$event)">
+                <div class="labels">
+                    <h4>Product Name - {{product_detail?.node.title}}</h4>
+                    <h5>Quantity<span class="mandatory">*</span> -
+                        <input class="inputform" [(ngModel)]=" model.quantity" id="quantity" type="number" name="quantity" required />
+                    </h5>
+                </div>
+                <div [(hidden)]="showSuccess">
+                <br>
+                 <input  class="inputform" [(ngModel)]="model.email" id="email " placeholder=" Your email " type="email" name="email" required>
+
+                <br>
+                <input  class="inputform " [(ngModel)]="model.mobile" id="mobile" pattern="[789][0-9]{9}" placeholder=" Mobile Number " type="text" name="mobile" required>
+                <br> 
+                 <input  id="addToCartButton" class="button submitbtn" style="margin-left: 0%;padding: 3px 25px 3px 25px;" type="submit" name="submit" value="Send Enquiry Now"> 
+                </div>
+                <div [(hidden)]="!showSuccess">
+                 <img  src="assets/images/success.png" alt="Twitter" style="width:10%;margin-right: 0%;"><p>Our executive will contact you. Explore <a href="#">More Products</a></p>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>
+<script>
+    var button = document.getElementById('addToCartButton');
+    button.addEventListener(
+        'click',
+        function() {
+            fbq('track', 'InitiateCheckout', model);
+        },
+        false
+    );
+</script>

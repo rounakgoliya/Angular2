@@ -1,0 +1,84 @@
+<div class="topMarket container">
+    <div class="row">
+        <div class="topMarketImage col-sm-12">
+            <img src="assets/images/B2B web elements-01.jpg" alt="New york" style="width:100%;max-height: 100%;">
+        </div>
+    </div>
+</div>
+<div class="galleryhead container ">
+    <div class="row hidden" style="margin-top: 25px;">
+        <div class="col-sm-2">
+            Catogory > Sub Catogory
+        </div>
+        <div class="col-sm-3">
+            <button class="button1"><i class="fa fa-th-large" aria-hidden="true"></i> Grid view</button>
+            <button class="button1"><i class="fa fa-list" aria-hidden="true"></i> List View</button>
+        </div>
+        <div class="col-sm-0">
+        </div>
+        <div class="col-sm-7">
+            Supplier Location :
+            <select class="selectoption" [(ngModel)]="SupplierLocationValue" name="SupplierLocation" placeholder="SupplierLocation">
+		        	    <option *ngFor="let c of SupplierLocation" [selected]="SupplierLocationValue == c.SupplierLocation" [ngValue]="c">{{c.name}}</option>
+                    </select> &nbsp;Min Order :
+            <select class="selectoption" [(ngModel)]="MinOrderValue" name="MinOrder" placeholder="MinOrder">
+		        	    <option *ngFor="let c of MinOrder" [selected]="MinOrderValue == c.MinOrder" [ngValue]="c">{{c.name}}</option>
+                    </select> Sort By :
+            <select class="selectoption" [(ngModel)]="SortByValue" name="SortBy" placeholder="SortBy">
+		        	    <option *ngFor="let c of SortBy" [selected]="SortByValue == c.SortBy" [ngValue]="c">{{c.name}}</option> 
+		            </select></div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-2 hidden">
+            <br>
+            <label class="optionName" for="options">Options :</label>
+            <label class="option" *ngFor="let option of options" style="display: block;">
+               <input  type="checkbox"
+                   name="options"
+                   value="{{option.value}}"
+                   (change)="selectedOptions()"
+                   [(ngModel)]="option.checked"/>
+            {{option.name}}
+              </label><br>
+            <label class="optionName" for="options">Options :</label>
+            <label class="option" *ngFor="let option of options" style="display: block;">
+               <input type="checkbox"
+                   name="options"
+                   value="{{option.value}}"
+                   (change)="selectedOptions()"
+                   [(ngModel)]="option.checked"/>
+            {{option.name}}
+              </label><br>
+            <label class="optionName" for="options">Options :</label>
+            <label class="option" *ngFor="let option of options" style="display: block;">
+               <input type="checkbox"
+                   name="options"
+                   value="{{option.value}}"
+                   (change)="selectedOptions()"
+                   [(ngModel)]="option.checked"/>
+            {{option.name}}
+              </label>
+        </div>
+        <div class="products col-sm-12">
+            <div class="row">
+                <div class="product col-sm-3" *ngFor="let p of productListing">
+                    <div>
+                        <a class="prodImage" [routerLink]="['/Product',p.node.id]"><img [src]="p.node.images.edges[0].node.src" [alt]="p.name"></a>
+
+
+                        <a [routerLink]="['/Product',p.id]">
+                            <h3 class="prodname">{{p.node.productType}}</h3>
+                        </a>
+                        <p class="hidden">{{p.mfg}}</p>
+                        <p class="prodprice hidden"><b>Rs. {{p.price}} </b>/ Piece</p>
+                        <p class="prodorder hidden"><b>{{p.minOrder}}</b> (min.order)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    fbq('track', 'ViewContent');
+</script>
